@@ -1,6 +1,13 @@
+import { GlobalStyles } from "./styles/global";
+
 function App() {
   return (
-    <div className="App">dt money</div>
+    <div className="App">
+			<h1>
+				dt money 
+			</h1>
+			<GlobalStyles />
+		</div>
   );
 }
 
