@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
 	:root {
+		/* Palette */
     --background: #f0f2f5;
     --red: #e52e4d;
     --green: #33cc95;
@@ -14,6 +15,9 @@ const GlobalStyles = createGlobalStyle`
     --text-title: #363f5f;
     --text-body: #969cb3;
     --shape: #ffffff;
+
+		/* Size */
+		--page-width: 1120px;
   }
 
   * {
