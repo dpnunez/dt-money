@@ -1,3 +1,4 @@
+import { formatMoney } from 'Helpers'
 import { ContainerData as Container } from './styles'
 
 interface DataProps {
@@ -13,7 +14,7 @@ const Data = (props: DataProps) => (
 			<h3>{props.title}</h3>
 			<img src={props.iconSrc} alt={props.title} />
 		</header>
-		<strong>{props.amount}</strong>
+		<strong>{formatMoney(props.amount)}</strong>
 	</Container>
 )
 export { Data }
