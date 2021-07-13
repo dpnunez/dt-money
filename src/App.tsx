@@ -1,11 +1,10 @@
+import { Header } from 'Components'
 import { GlobalStyles } from "./styles/global";
 
 function App() {
   return (
     <div className="App">
-			<h1>
-				dt money 
-			</h1>
+			<Header />
 			<GlobalStyles />
 		</div>
   );
