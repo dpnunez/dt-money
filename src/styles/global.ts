@@ -58,6 +58,20 @@ const GlobalStyles = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+
+	.ReactModal__Overlay {
+		opacity: 0;
+		transition: all 200ms ease;
+	}
+
+	.ReactModal__Overlay--after-open {
+		opacity: 1;
+	}
+
+	.ReactModal__Overlay--before-close {
+		opacity: 0;
+	}
 `
 
 export { GlobalStyles }
