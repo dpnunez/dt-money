@@ -1,36 +1,42 @@
+import { useCallback, useEffect } from 'react'
 import Modal from 'react-modal'
 import { useForm } from 'react-hook-form'
+import { useTransactions } from 'hooks/useTransaction'
 
 import { FormContainer, RadioBox, TransactionTypeContainer } from './styles'
 
 import closeImg from 'Assets/close.svg'
 import incomeImg from 'Assets/income.svg'
 import outcomeImg from 'Assets/outcome.svg'
-import { useCallback, useEffect } from 'react'
+
+interface FormData {
+	title: string;
+	amount: number;
+	category: string;
+	type: string;
+}
 
 interface NewTransactionProps {
 	isOpen: boolean;
 	onRequestClose: () => void
 }
 
-interface FormData {
-	title: string;
-	value: number;
-	type: string;
-	category: string;
-}
-
 const NewTransactionModal = ({ isOpen, onRequestClose }: NewTransactionProps) => {
-	const { register, setValue, watch, handleSubmit } = useForm()
+	const { register, setValue, watch, handleSubmit, reset } = useForm()
+	const { createTransaction } = useTransactions()
 
 
 	useEffect(() => {
 		register('type', { required: true })
 	}, [register])
 
-	const handleCreateNewTransaction = useCallback((formData: FormData) => {
-		console.log(formData)
-	}, [])
+
+	const onSubmit = useCallback(async (data: FormData) => {
+		await createTransaction(data)
+		reset()
+		onRequestClose()
+	}, [createTransaction, onRequestClose, reset])
+
 
 	const type = watch('type')
 
@@ -49,11 +55,11 @@ const NewTransactionModal = ({ isOpen, onRequestClose }: NewTransactionProps) =>
       >
         <img src={closeImg} alt="Fechal modal" />
       </button>
-			<FormContainer onSubmit={handleSubmit(handleCreateNewTransaction)}>
+			<FormContainer onSubmit={handleSubmit(onSubmit)}>
 				<h2>Cadastrar transação</h2>
 
 				<input {...register('title', { required: true })} placeholder="Título" />
-				<input {...register('value', { valueAsNumber: true, required: true })} type="number" placeholder="Valor" />
+				<input {...register('amount', { valueAsNumber: true, required: true })} type="number" placeholder="Valor" />
 
 				<TransactionTypeContainer>
           <RadioBox

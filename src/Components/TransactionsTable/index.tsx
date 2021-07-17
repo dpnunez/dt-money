@@ -1,13 +1,10 @@
-import { useEffect } from "react"
+import { useTransactions } from "hooks/useTransaction"
 import { Container } from "./styles"
-import { formatMoney } from "Helpers"
-import { fetchClient } from "Services/fetchClient"
+
+import { formatDate, formatMoney } from "Helpers"
 
 const TransactionsTable = () => {
-
-	useEffect(() => {
-		fetchClient.get('/transactions').then(response => console.log(response)).catch(e => console.log(e))
-	}, [])
+	const { transactions } = useTransactions()
 
 	return (
 		<Container>
@@ -22,18 +19,18 @@ const TransactionsTable = () => {
 				</thead>
 	
 				<tbody>
-					<tr>
-						<td>Lorem ipsum</td>
-						<td>{formatMoney(200)}</td>				
-						<td>Ipsum</td>
-						<td>20</td>
-					</tr>
-					<tr>
-						<td>Lorem ipsum</td>
-						<td className="">{formatMoney(230)}</td>				
-						<td>Ipsum</td>
-						<td>20</td>
-					</tr>
+					{transactions.map(transaction => (
+						<tr key={transaction.id}>
+							<td>{transaction.title}</td>
+							<td className={transaction.type}>
+								{formatMoney(transaction.amount)}
+							</td>				
+							<td>{transaction.category}</td>
+							<td>
+								{formatDate(new Date(transaction.createdAt))}
+							</td>
+						</tr>
+					))}
 				</tbody>
 			</table>
 		</Container>
