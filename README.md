@@ -21,14 +21,11 @@
 [![Rocketseat: Profile](https://img.shields.io/static/v1?label=Rocketseat&message=profile&style=for-the-badge&color=blueviolet)](https://app.rocketseat.com.br/me/daniel-nunez-01937)
 </p>
 
-
----
 <br />
 
 # 💰 dt money
 Financial control application in general. In it, you can register new expenses or deposits, and have access to a dashboard containing important information about your finances such as all deposits, all withdrawals, and the general balance
 
----
 
 # 🚀 Tech's
 
