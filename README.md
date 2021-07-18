@@ -1,46 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-## Available Scripts
+<p align="center">
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+   <img align="center" src="readme-assets/banner.png" width="100%" alt="dt money">
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Rocketseat: Profile](https://img.shields.io/static/v1?label=Rocketseat&message=profile&style=for-the-badge&color=blueviolet)](https://app.rocketseat.com.br/me/daniel-nunez-01937)
+</p>
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+<br />
 
-### `yarn build`
+# 💰 dt money
+Financial control application in general. In it, you can register new expenses or deposits, and have access to a dashboard containing important information about your finances such as all deposits, all withdrawals, and the general balance
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 🚀 Tech's
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**React**: Framework used for the development of interfaces;
 
-### `yarn eject`
+**Typescript**: Language used;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Hooks**: Best and most modern way to control the life-cycle of React components;
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**CSS-in-JS:** Using the styled-components lib to give "super powers" to the application's css;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**CSS global variables**: Usefull feature of CSS3;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**React-modal**: Lib for application modal control;
 
-## Learn More
+**MirageJS**: Excellent lib for mocking data on the front end
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+<p align="center">
+  <a href="https://rocketseat.com.br/">
+    <img align="center" src="readme-assets/ignite-logo.svg" width="25%" alt="dt money">
+  </a>
+  <h4 align="center"><i>Application developed during Ignite bootcamp studies, powered by Rocketseat</i></h4>
+</p>
+
+
+<br />
+<br />
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[license-shield]: https://img.shields.io/github/license/dpnunez/dt-money.svg?style=for-the-badge
+[license-url]: MIT
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/daniel-n%C3%BA%C3%B1ez/
