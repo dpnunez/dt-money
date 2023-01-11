@@ -3,8 +3,9 @@ import * as Dialog from '@radix-ui/react-dialog'
 
 import logoImg from '../../assets/logo.svg'
 import { NewTransactionModal } from '../NewTransactionModal'
+import { memo } from 'react'
 
-export const Header = () => {
+const HeaderComponent = () => {
   return (
     <HeaderContainer>
       <HeaderContent>
@@ -21,3 +22,5 @@ export const Header = () => {
     </HeaderContainer>
   )
 }
+
+export const Header = memo(HeaderComponent)

@@ -7,7 +7,6 @@ import { useSummary } from '../../hooks/useSummary'
 export function Summary() {
   const theme = useTheme()
   const summary = useSummary()
-  console.log('render')
 
   return (
     <SummaryContainer>
